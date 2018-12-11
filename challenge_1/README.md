@@ -1,0 +1,1 @@
+run npm start for a live watch babel compiler and live-sever in a watch mode

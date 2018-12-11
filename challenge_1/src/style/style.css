@@ -1,0 +1,15 @@
+body {
+    background-color: aliceblue;
+}
+
+#root {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+img {
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
+  }
