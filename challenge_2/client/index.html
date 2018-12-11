@@ -1,2 +1,25 @@
-
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="jquery.js"></script>
+    <script src="app.js"></script>
+    <title>CSV Generator</title>
+  </head>
+  <body>
+    <div id = "main">
+        <br><br>
+      <img src="style/logo.jpeg">
+      <form id="generate-form">
+        Source JSon text<br>
+        <textarea id="source" rows="7" cols="60" placeholder="your Json goes here"></textarea>
+        <br><br>
+        <input id="generate" type="submit" value="Generate">
+      </form>
+      <br>
+      <textarea id="result" rows="7" cols="60" placeholder="CSV will appear here" disabled></textarea>
+      <br><br><br>
+    </div>
+  </body>
+</html>
