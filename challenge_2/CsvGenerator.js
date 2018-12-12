@@ -10,12 +10,12 @@
 module.exports = {
     generate: function (obj, callback) {
         var result = '';
-        var keys = getKeys(obj);
+        var keys = this.getKeys(obj);
       
         result += keys.join(',');
         result += '\r\n';
         
-        result += getValues(keys,obj);
+        result += this.getValues(keys,obj);
 
         callback(result);
     },
@@ -42,7 +42,7 @@ module.exports = {
         if ( Array.isArray(obj[j]) ) {
         var childern = obj[j];
         for (var k = 0; k < childern.length; k++) {
-            result = result + getValues(keys, childern[k]); 
+            result = result + this.getValues(keys, childern[k]); 
         }
         }
     }
