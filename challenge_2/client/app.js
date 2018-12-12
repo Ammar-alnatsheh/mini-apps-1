@@ -4,8 +4,21 @@ document.getElementById("generate-form").addEventListener("click", function(even
 
 $(document).ready(function(){
 
-    var button = $('#generate');
-    button.click(function(event){
+    $('#read').change(function(event){
+        var control = document.getElementById("read");   
+        $('#source').empty();
+        var reader = new FileReader();        
+        reader.onload = function(event){
+            var contents = event.target.result; 
+            document.getElementById('source').value = contents;          
+        };        
+        reader.onerror = function(event){
+            console.error("File could not be read! Code " + event.target.error.code);
+        };        
+        reader.readAsText(control.files[0]);        
+    });
+    
+    $('#generate').click(function(event){
 
         var source = $('#source').val();
         var data = JSON.parse(JSON.stringify(source));
