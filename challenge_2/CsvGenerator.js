@@ -8,7 +8,7 @@
 // Beth,Johnson,San Francisco,San Francisco,Broker/Sales Person,7500000
 
 module.exports = {
-    generate: function (obj) {
+    generate: function (obj, callback) {
         var result = '';
         var keys = getKeys(obj);
       
@@ -16,7 +16,8 @@ module.exports = {
         result += '\r\n';
         
         result += getValues(keys,obj);
-        return result;
+
+        callback(result);
     },
 
     getKeys: function(obj) {

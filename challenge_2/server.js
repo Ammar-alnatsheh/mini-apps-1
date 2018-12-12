@@ -2,15 +2,17 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
+const CSV = require('./CsvGenerator');
 const PORT = 3000;
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, './client')));
 
 app.post('/', (req, res) => {
-    res.status(201);
-    res.send(req.body);
+    CSV.generate(req.body, data => {
+            res.status(200);
+            res.send(data);
+    });
 });
 
  
