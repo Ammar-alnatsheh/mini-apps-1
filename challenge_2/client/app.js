@@ -1,12 +1,4 @@
-$(document).ready(function(){
+// document.getElementById("generate-form").addEventListener("click", function(event){
+//     event.preventDefault();
+// });
 
-    var button = $('#generate');
-    button.click(function(event){
-
-        var source = $('#source').val();
-        $('#result').empty().append(source);
-
-    });
-
-   
-});

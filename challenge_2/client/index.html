@@ -4,22 +4,22 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style/style.css">
     <script src="jquery.js"></script>
-    <script src="app.js"></script>
     <title>CSV Generator</title>
   </head>
   <body>
     <div id = "main">
         <br><br>
       <img src="style/logo.jpeg">
+      <form id="generate-form" method="post" action="">
+        Source JSon text<br>
+        <textarea name="source" rows="7" cols="60" placeholder="your Json goes here" form="generate-form"></textarea>
+        <br><br>
+        <button id="generate" type="submit">Generate</button>
+      </form>
       <br>
-      Source JSon text
-      <br>
-      <textarea id="source" rows="7" cols="60" placeholder="your Json goes here"></textarea>
-      <br><br>
-      <button id="generate">Generate</button>
-      <br><br>
       <textarea id="result" rows="7" cols="60" placeholder="CSV will appear here" disabled></textarea>
       <br><br><br>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
