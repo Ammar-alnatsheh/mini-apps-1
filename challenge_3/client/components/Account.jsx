@@ -3,10 +3,15 @@ class Account extends React.Component {
       super(props);
   
     }
+
+    handleInputChange(e) {
+      e.preventDefault();
+      this.props.setAccount();
+    }
   
     render() {
       return (
-        <div className="form">
+        <form onSubmit={this.handleInputChange}>
           <h2>Account form</h2>
           <div>
             Name:<input type="text" name="name" placeholder="Mickey"></input>
@@ -18,7 +23,7 @@ class Account extends React.Component {
             Email:<input type="email" name="email" placeholder="example@HR.com"></input>
           </div>
           <input type="submit" value="Submit"></input>
-        </div>
+        </form>
       );
     }
   }

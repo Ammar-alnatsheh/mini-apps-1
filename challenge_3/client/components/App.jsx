@@ -16,7 +16,6 @@ class App extends React.Component {
     this.setShipping = this.setShipping.bind(this);
     this.setCreditCard = this.setCreditCard.bind(this);
     this.checkout = this.checkout.bind(this);
-    this.reset = this.reset.bind(this);
 
   }
 
@@ -43,8 +42,9 @@ class App extends React.Component {
     });
   }
 
-  setCart(arr) {
-
+  setCart(e) {
+    var a = e.target;
+    console.log(a.val);
   }
 
   setAccount(obj) {
@@ -52,6 +52,7 @@ class App extends React.Component {
   }
 
   setShipping(obj) {
+    console.log("next");
 
   }
 
@@ -71,20 +72,16 @@ class App extends React.Component {
       alert('Server cant complete the request :(');
     });
   }
-
-  reset() {
-
-  }
   
 
   render() {
     return (
         <div>
           <Shopping setCart={this.setCart} items={this.state.items}/>
-          <Account setAccount={this.setAccount} user={this.state.user}/>
-          <Shipping setShipping={this.setShipping} address={this.state.address}/>
-          <CreditCard setCreditCard={this.setCreditCard} card={this.state.card}/>
-          <Checkout checkout={this.checkout} reset={this.reset}/>
+          <Account setAccount={this.setAccount}/>
+          <Shipping setShipping={this.setShipping}/>
+          <CreditCard setCreditCard={this.setCreditCard}/>
+          <Checkout checkout={this.checkout} items={this.state.cart}/>
         </div>
     );
   }

@@ -1,12 +1,17 @@
 class Shipping extends React.Component {
     constructor(props) {
       super(props);
+      
+    }
   
+    handleInputChange(e) {
+      e.preventDefault();
+      this.props.setShipping();
     }
   
     render() {
       return (
-        <div className="form">
+        <form onSubmit={this.handleInputChange}>
         <h2>Shipping form</h2>
         <div>
           Line 1:<input type="text" name="line1"></input>
@@ -27,7 +32,7 @@ class Shipping extends React.Component {
           Phone #:<input type="tel" name="phone" ></input>
         </div>
         <input type="submit" value="Submit"></input>
-      </div>
+      </form>
       );
     }
   }

@@ -3,10 +3,15 @@ class CreditCard extends React.Component {
       super(props);
   
     }
+
+    handleInputChange(e) {
+      e.preventDefault();
+      this.props.setCreditCard();
+    }
   
     render() {
       return (
-        <div className="form">
+        <form onSubmit={this.handleInputChange}>
           <h2>Credit Card Form</h2>
           <div>
             Credit Card #:<input type="number" name="Cardnumber" placeholder="12345"></input>
@@ -21,7 +26,7 @@ class CreditCard extends React.Component {
             Zip Code:<input type="number" name="email" placeholder=""></input>
           </div>
           <input type="submit" value="Submit"></input>
-        </div>
+        </form>
       );
     }
   }
