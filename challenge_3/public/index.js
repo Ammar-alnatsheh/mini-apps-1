@@ -1,0 +1,8 @@
+'use strict';
+
+ReactDOM.render(React.createElement(
+  'h1',
+  null,
+  'hello world'
+), document.getElementById('root'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2NsaWVudC9pbmRleC5qc3giXSwibmFtZXMiOlsiUmVhY3RET00iLCJyZW5kZXIiLCJkb2N1bWVudCIsImdldEVsZW1lbnRCeUlkIl0sIm1hcHBpbmdzIjoiOztBQUFBQSxTQUFTQyxNQUFULENBQWdCO0FBQUE7QUFBQTtBQUFBO0FBQUEsQ0FBaEIsRUFBc0NDLFNBQVNDLGNBQVQsQ0FBd0IsTUFBeEIsQ0FBdEMiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJSZWFjdERPTS5yZW5kZXIoPGgxPmhlbGxvIHdvcmxkPC9oMT4sIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyb290JykpOyJdfQ==

@@ -1,0 +1,20 @@
+{
+  "name": "challenge_3",
+  "version": "1.0.0",
+  "description": "one page app to do shopping of a list and store all the user infor in a db",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel client --out-dir public --presets=react --source-maps inline --watch"
+  },
+  "author": "ammar al-natsheh",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.16.4",
+    "live-server": "^1.2.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}
