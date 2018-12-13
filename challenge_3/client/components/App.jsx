@@ -60,16 +60,16 @@ class App extends React.Component {
   }
 
   checkout() {
-    // fetch('/checkout', {
-    //   method: "POST",
-    //   headers: {
-    //       "Content-Type": "application/json; charset=utf-8",
-    //   },
-    //   body: JSON.stringify(this.state)
-    // })
-    // .then(()=>{
-    //   this.getItems();
-    // });
+    fetch('/checkout', {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json; charset=utf-8",
+      },
+      body: JSON.stringify(this.state)
+    })
+    .catch(error => {
+      alert('Server cant complete the request :(');
+    });
   }
 
   reset() {
