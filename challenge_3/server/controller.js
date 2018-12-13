@@ -27,37 +27,38 @@ const checkout = (req, res) => {
   const cards_params = [params.user.name, params.card.number, params.card.exp, params.card.cvv, params.card.zipcode];
 
 
-  db.query(orders, orders_params, (err, results) => {
-    if(err) {
-      res.status(501).send();
-    } else {
-      res.status(201).send();
-    }
-  })
-
   db.query(users, users_params, (err, results) => {
     if(err) {
       res.status(501).send();
     } else {
-      res.status(201).send();
+
+      db.query(orders, orders_params, (err, results) => {
+        if(err) {
+          res.status(501).send();
+        } else {
+          
+          db.query(adresses, adresses_params, (err, results) => {
+            if(err) {
+              res.status(501).send();
+            } else {
+              
+              db.query(cards, cards_params, (err, results) => {
+                if(err) {
+                  res.status(501).send();
+                } else {
+                  res.status(201).send();
+                }
+              })
+              
+            }
+          })
+
+        }
+      })
+
     }
   })
 
-  db.query(adresses, adresses_params, (err, results) => {
-    if(err) {
-      res.status(501).send();
-    } else {
-      res.status(201).send();
-    }
-  })
-
-  db.query(cards, cards_params, (err, results) => {
-    if(err) {
-      res.status(501).send();
-    } else {
-      res.status(201).send();
-    }
-  })
 }
 
 
