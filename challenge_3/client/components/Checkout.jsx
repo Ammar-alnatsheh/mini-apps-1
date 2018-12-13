@@ -1,4 +1,4 @@
-class Account extends React.Component {
+class Checkout extends React.Component {
     constructor(props) {
       super(props);
   
@@ -6,9 +6,9 @@ class Account extends React.Component {
   
     render() {
       return (
-          <h1>Account form</h1>
+          <h1>Checkout form</h1>
       );
     }
   }
-  
-  window.Account = Account;
+ 
+  window.Checkout = Checkout;

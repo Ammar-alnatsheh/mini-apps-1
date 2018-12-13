@@ -10,5 +10,5 @@ class Shipping extends React.Component {
       );
     }
   }
-  
-  export default Shipping;
+ 
+  window.Shipping = Shipping;

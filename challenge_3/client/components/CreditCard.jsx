@@ -10,5 +10,5 @@ class CreditCard extends React.Component {
       );
     }
   }
-  
-  export default CreditCard;
+
+  window.CreditCard = CreditCard;
