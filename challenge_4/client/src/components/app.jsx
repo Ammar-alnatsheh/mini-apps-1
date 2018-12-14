@@ -43,6 +43,8 @@ setCell(event) {
   x = parseInt(x); 
   y = parseInt(y); 
 
+  console.log(x,y);
+
   var grid = this.state.board;
   var turn = this.state.turn;
 
@@ -54,7 +56,7 @@ setCell(event) {
     turn = 1;
   }
 
-  if ( this.isGameFinish(grid) ) {
+  if ( this.isGameFinish(x,y) ) {
     var winner = '';
 
     if (this.state.turn === 1) {
@@ -64,11 +66,19 @@ setCell(event) {
     }
     alert("Yay Game finished " + winner);
     this.reset();
+  } else {
+
+    this.setState({
+      board: grid,
+      turn: turn,
+      player1: this.state.player1,
+      player2: this.state.player2
+    });
   }
 
 }
 
-isGameFinish(grid) {
+isGameFinish(x,y) {
   return false;
 }
 
