@@ -1,11 +1,12 @@
 import React from 'react';
 import Header from './Header.jsx';
+import Board from './Board.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      board: [],
+      board: this.emptyBoard(),
       turn: 1,
       player1: '',
       player2: ''
@@ -36,13 +37,16 @@ emptyBoard() {
   ];
 }
 
+setCell(event) {
+  console.log(event.target.className);
+}
+
 render() {
     return (
       <div className="app">
         <Header player1={this.state.player1} player2={this.state.player2} turn={this.state.turn}/>
-        <div className="board">
-          <h3>board</h3>
-        </div>
+        <hr></hr>
+        <Board board={this.state.board} setCell={this.setCell.bind(this)}/>
       </div>
     );
   }
